@@ -1,3 +1,4 @@
+import 'package:film_app/data/model/character_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,7 +27,8 @@ class AppRouter{
           );
         });
       case AppRoutes.characterDetails:
-        return MaterialPageRoute(builder: (context) => const CharacterDetailsScreen());
+        final character= settings.arguments as Results;
+        return MaterialPageRoute(builder: (context) =>  CharacterDetailsScreen(characterModel: character));
       default:
         return MaterialPageRoute(builder: ((context) =>  CharacterScreen()));
     }
