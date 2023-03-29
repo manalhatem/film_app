@@ -1,6 +1,7 @@
 import 'package:film_app/bussiness_logic/cubit/characters_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_offline/flutter_offline.dart';
 import '../../constants/color.dart';
 import '../../data/model/character_model.dart';
 import '../widgets/character_item.dart';
@@ -81,7 +82,26 @@ class _CharacterScreenState extends State<CharacterScreen> {
           }, icon: const Icon(Icons.search, color: AppColors.gray)),
         ],
       ),
-      body: buildBlocWidget(),
+      body: buildBlocWidget()
+      // OfflineBuilder(
+      //     connectivityBuilder: (
+      //         BuildContext context,
+      //         ConnectivityResult connectivity,
+      //         Widget child,
+      //         ) {
+      //       final bool connected = connectivity != ConnectivityResult.none;
+      //       return connected? buildBlocWidget():
+      //           Column(
+      //             children: [
+      //               Image.asset("assets/images/13262-no-internet-connection.gif"),
+      //               Text('Check Internet')
+      //
+      //             ],
+      //           );
+      //
+      //     })
+
+     
     );
   }
 
