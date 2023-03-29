@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:film_app/constants/color.dart';
 import 'package:film_app/data/model/character_model.dart';
 import 'package:flutter/material.dart';
@@ -36,9 +37,30 @@ class CharacterDetailsScreen extends StatelessWidget {
                     const SizedBox(height: 20,),
                   ],
                 ),
-
               ),
-              const SizedBox(height: 280,),// ضفت السايزبوكس علشان ال sliverList مش هتطلع فوق غير لما يكون في عناصر كتير
+              const SizedBox(height: 15),// ضفت السايزبوكس علشان ال sliverList مش هتطلع فوق غير لما يكون في عناصر كتير
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: SizedBox(
+                 width: 250.0,
+                 child: DefaultTextStyle(
+                   style: const TextStyle(
+                    fontSize: 24,
+                     color: AppColors.yellow,
+                     fontFamily: 'Bobbers'),
+                  child: AnimatedTextKit(
+                  animatedTexts: [
+                  TyperAnimatedText('It is not enough to do your best,'),
+                  TyperAnimatedText('you must know what to do,'),
+                  TyperAnimatedText('and then do your best.'),
+                       ],
+                     onTap: () {print("Tap Event");},
+    ),
+    ),
+    ),
+              ),
+              const SizedBox(height: 230),// ضفت السايزبوكس علشان ال sliverList مش هتطلع فوق غير لما يكون في عناصر كتير
+
             ]
           ))
         ],

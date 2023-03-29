@@ -34,7 +34,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.0.1
   flutter_bloc: ^8.1.2
-  flutter_offline: ^2.1.0  
+  flutter_offline: ^2.1.0
+  animated_text_kit: ^4.2.2
 
 
 dev_dependencies:
